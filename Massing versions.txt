@@ -1,0 +1,11 @@
+1.0: Only rectangle inputs, no rotation, random fitting.
+1.1: Add rotation to the rectangles. Bound the rotated rectangle to a larger rectangle with no rotation.
+1.2: The rectangles now are not bounded to a larger rectangle but use its boundary directly.
+1.3: Every time there is a feasible output, the site area will shrink to the size of the feasible output, the randomly generated positions for next iteration will be in a smaller area. But somehow, this does not improve the performance.
+Distance_and_Alignment: Contains two functions. Distance: check the distance between two retangles and check whether they exceed a certain value. Alignment: given a line, align the rectangle with it.
+2.1: Using scipy.optimize.minimum to find the position of rectangles. The objective function is the smallest area and the constraints are no overlapping.
+3.1: Simulated annealing. 
+3.2: Added a constraint for buildings to have a minimum distance between each other.
+3.3: Now buildings have types, either private or public. The objective function now considers the distance of private buildings to gate and private buildings to public buildings.
+3.4: Adding a new stopping criteria, if the score does not increase in 1000 iterations, it stops.
+3.5: During the massing process, the buildings will first shift as a whole, then one of the building will shift.
